@@ -1,0 +1,10 @@
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\bin\Debug\HeraAI.API.SQLDatabase.dacpac
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\bin\Debug\HeraAI.API.SQLDatabase.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\bin\Debug\HeraAI.API.SQLDatabase.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\HeraAI.API.SQLDatabase.sqlproj.AssemblyReference.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\HeraAI.API.SQLDatabase.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\HeraAI.API.SQLDatabase.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\Model.xml
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\refactor.xml
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\postdeploy.sql
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.SQLDatabase\obj\Debug\predeploy.sql

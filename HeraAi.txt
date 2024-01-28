@@ -1,0 +1,36 @@
+Base de dados relacional em SQL Server
+Aplicação Mobile em Flutter
+Aplicação Web em Flutter (???)
+API em C#
+Modulos de comunicação com a raspberry em Python
+
+
+A base de dados relacional em SQL Server pode armazenar dados sobre os sensores da casa, como a temperatura, a umidade e a luminosidade.
+A aplicação mobile em Flutter pode usar esses dados para exibir informações sobre o estado da casa, como a temperatura atual ou a luminosidade do ambiente.
+A API em C# pode ser usada pela aplicação mobile para controlar os dispositivos da casa, como ligar ou desligar o ar condicionado ou acender ou apagar as luzes.
+Os módulos de comunicação com a raspberry em Python podem ser usados para controlar os dispositivos da casa a partir da raspberry pi, como ligar ou desligar o sistema de segurança ou abrir ou fechar as portas.
+
+
+Use um design modular para facilitar a manutenção e a expansão do sistema.
+Use padrões e boas práticas de desenvolvimento para garantir a segurança e a confiabilidade do sistema.
+Use testes automatizados para garantir que o sistema funcione corretamente.
+
+
+API em C#:
+C# é uma escolha excelente, especialmente se você estiver usando o ecossistema .NET. Você pode usar o ASP.NET Core para criar uma API robusta e escalável.
+
+
+Base de Dados em SQL Server:
+Se você está confortável com SQL Server e ele atende aos requisitos do seu projeto, é uma escolha sólida. SQL Server é bem integrado com a stack .NET e oferece várias funcionalidades para gerenciamento de dados.
+
+
+Aplicação Móvel em Flutter:
+Flutter é uma escolha inteligente para o desenvolvimento cross-platform, permitindo que você alcance usuários tanto em dispositivos Android quanto iOS com um código base. Dart, a linguagem usada pelo Flutter, é eficiente para o desenvolvimento de interfaces de usuário ricas.
+
+
+Módulos de Integração com Raspberry Pi em Python:
+Python é uma excelente escolha para interação com a Raspberry Pi. A vasta comunidade e suporte para Raspberry Pi fazem de Python uma linguagem popular para automação e projetos IoT. Você pode usar bibliotecas como RPi.GPIO para interagir com os pinos da Raspberry Pi e Flask para criar uma API simples.
+
+
+Hera: Hera era a rainha dos deuses e a deusa do casamento e da família. Ela frequentemente representava a lealdade conjugal e a proteção das uniões matrimoniais.
+

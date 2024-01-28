@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HeraAI.API.Exceptions\HeraAI.API.Exceptions.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Models.Specs\HeraAI.API.Models.Specs.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Models\HeraAI.API.Models.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Resources\HeraAI.API.Resources.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Tools\HeraAI.API.Tools.csproj" />
+  </ItemGroup>
+
+</Project>

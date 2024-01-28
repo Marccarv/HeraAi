@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "HeraAI.API.Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HeraAI.API.Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HeraAI.API.Enums.dll": {}
+        }
+      },
+      "HeraAI.API.Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HeraAI.API.Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HeraAI.API.Exceptions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HeraAI.API.Enums/1.0.0": {
+      "type": "project",
+      "path": "../HeraAI.API.Enums/HeraAI.API.Enums.csproj",
+      "msbuildProject": "../HeraAI.API.Enums/HeraAI.API.Enums.csproj"
+    },
+    "HeraAI.API.Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../HeraAI.API.Exceptions/HeraAI.API.Exceptions.csproj",
+      "msbuildProject": "../HeraAI.API.Exceptions/HeraAI.API.Exceptions.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "HeraAI.API.Enums >= 1.0.0",
+      "HeraAI.API.Exceptions >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\User\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Models.Specs\\HeraAI.API.Models.Specs.csproj",
+      "projectName": "HeraAI.API.Models.Specs",
+      "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Models.Specs\\HeraAI.API.Models.Specs.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Models.Specs\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Enums\\HeraAI.API.Enums.csproj": {
+              "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Enums\\HeraAI.API.Enums.csproj"
+            },
+            "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Exceptions\\HeraAI.API.Exceptions.csproj": {
+              "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Exceptions\\HeraAI.API.Exceptions.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
