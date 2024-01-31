@@ -22,7 +22,7 @@ namespace HeraAI.API.Resources.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class SpecsResources {
+    public class SpecsResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace HeraAI.API.Resources.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeraAI.API.Resources.Resources.SpecsResources", typeof(SpecsResources).Assembly);
@@ -51,7 +51,7 @@ namespace HeraAI.API.Resources.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,11 +61,92 @@ namespace HeraAI.API.Resources.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An Error occur while deserialize a JSON string to a object;.
+        /// </summary>
+        public static string DATAINTERCHANGE_JSON_DESERIALIZE_ERROR {
+            get {
+                return ResourceManager.GetString("DATAINTERCHANGE_JSON_DESERIALIZE_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enumeration option not expected;.
+        /// </summary>
+        public static string ENUM_OPTION_NOT_EXPECTED {
+            get {
+                return ResourceManager.GetString("ENUM_OPTION_NOT_EXPECTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Empty connection string not allowed;.
         /// </summary>
-        internal static string FORBIDDEN_EMPTY_CONNECTIONSTRING {
+        public static string FORBIDDEN_EMPTY_CONNECTIONSTRING {
             get {
                 return ResourceManager.GetString("FORBIDDEN_EMPTY_CONNECTIONSTRING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Null value not allowed;.
+        /// </summary>
+        public static string FORBIDDEN_NULL {
+            get {
+                return ResourceManager.GetString("FORBIDDEN_NULL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Credentials;.
+        /// </summary>
+        public static string LOGIN_INVALID_CREDENTIALS {
+            get {
+                return ResourceManager.GetString("LOGIN_INVALID_CREDENTIALS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value is out of allowed interval;.
+        /// </summary>
+        public static string OUT_OF_ALLOWED_INTERVAL {
+            get {
+                return ResourceManager.GetString("OUT_OF_ALLOWED_INTERVAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value does not respect the regex pattern;.
+        /// </summary>
+        public static string REGEX_PATTERN_INCOMPATIBILITY {
+            get {
+                return ResourceManager.GetString("REGEX_PATTERN_INCOMPATIBILITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SPECS invalid value:.
+        /// </summary>
+        public static string SPECS_PREFIX_INVALID_VALUE {
+            get {
+                return ResourceManager.GetString("SPECS_PREFIX_INVALID_VALUE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value can not be converted to the new type specified;.
+        /// </summary>
+        public static string TYPE_CONVERSION_IMCOMPATIBILITY {
+            get {
+                return ResourceManager.GetString("TYPE_CONVERSION_IMCOMPATIBILITY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value of property -updating- is inconsistent with current data operation;.
+        /// </summary>
+        public static string UPDATING_PROPERTY_VALUE_INCONSISTENCY {
+            get {
+                return ResourceManager.GetString("UPDATING_PROPERTY_VALUE_INCONSISTENCY", resourceCulture);
             }
         }
     }

@@ -22,7 +22,7 @@ namespace HeraAI.API.Resources.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class SQLResources {
+    public class SQLResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace HeraAI.API.Resources.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HeraAI.API.Resources.Resources.SQLResources", typeof(SQLResources).Assembly);
@@ -51,7 +51,7 @@ namespace HeraAI.API.Resources.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,20 +61,83 @@ namespace HeraAI.API.Resources.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No connection is established with database;.
+        /// </summary>
+        public static string SQLSERVER_CONNECTIONS_NO_CONNECTION {
+            get {
+                return ResourceManager.GetString("SQLSERVER_CONNECTIONS_NO_CONNECTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Object is being destroyed but connection is still open;.
         /// </summary>
-        internal static string SQLSERVER_DESTRUCTION_CONNECTION_STILL_OPEN {
+        public static string SQLSERVER_DESTRUCTION_CONNECTION_STILL_OPEN {
             get {
                 return ResourceManager.GetString("SQLSERVER_DESTRUCTION_CONNECTION_STILL_OPEN", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SQL Engine Message:.
+        /// </summary>
+        public static string SQLSERVER_PREFIX_INTERNAL_ERROR {
+            get {
+                return ResourceManager.GetString("SQLSERVER_PREFIX_INTERNAL_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SQL unknown origin:.
         /// </summary>
-        internal static string SQLSERVER_PREFIX_UNKNOWN_ERROR {
+        public static string SQLSERVER_PREFIX_UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("SQLSERVER_PREFIX_UNKNOWN_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There isn&apos;t no transaction to be commited;.
+        /// </summary>
+        public static string SQLSERVER_TRANSACTIONS_COMMIT_MISSED_TRANSACTION {
+            get {
+                return ResourceManager.GetString("SQLSERVER_TRANSACTIONS_COMMIT_MISSED_TRANSACTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must have an open connection to initiate a transaction;.
+        /// </summary>
+        public static string SQLSERVER_TRANSACTIONS_CONNECTION_CLOSED {
+            get {
+                return ResourceManager.GetString("SQLSERVER_TRANSACTIONS_CONNECTION_CLOSED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can not work on SQLConnectionModes.auto with sql transactions;.
+        /// </summary>
+        public static string SQLSERVER_TRANSACTIONS_CONNECTIONMODE_INCONSISTENCY {
+            get {
+                return ResourceManager.GetString("SQLSERVER_TRANSACTIONS_CONNECTIONMODE_INCONSISTENCY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There isn&apos;t no transaction to be rollback;.
+        /// </summary>
+        public static string SQLSERVER_TRANSACTIONS_ROLLBACK_MISSED_TRANSACTION {
+            get {
+                return ResourceManager.GetString("SQLSERVER_TRANSACTIONS_ROLLBACK_MISSED_TRANSACTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use of transaction is mandatory;.
+        /// </summary>
+        public static string SQLSERVER_TRANSACTIONS_TRANSACTION_IS_MANDATORY {
+            get {
+                return ResourceManager.GetString("SQLSERVER_TRANSACTIONS_TRANSACTION_IS_MANDATORY", resourceCulture);
             }
         }
     }

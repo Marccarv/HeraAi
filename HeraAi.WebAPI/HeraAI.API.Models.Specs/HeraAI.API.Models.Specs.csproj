@@ -9,6 +9,9 @@
   <ItemGroup>
     <ProjectReference Include="..\HeraAI.API.Enums\HeraAI.API.Enums.csproj" />
     <ProjectReference Include="..\HeraAI.API.Exceptions\HeraAI.API.Exceptions.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Models\HeraAI.API.Models.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Resources\HeraAI.API.Resources.csproj" />
+    <ProjectReference Include="..\HeraAI.API.Tools\HeraAI.API.Tools.csproj" />
   </ItemGroup>
 
 </Project>

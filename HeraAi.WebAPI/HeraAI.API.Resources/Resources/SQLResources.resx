@@ -117,10 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SQLSERVER_CONNECTIONS_NO_CONNECTION" xml:space="preserve">
+    <value>No connection is established with database;</value>
+  </data>
   <data name="SQLSERVER_DESTRUCTION_CONNECTION_STILL_OPEN" xml:space="preserve">
     <value>Object is being destroyed but connection is still open;</value>
   </data>
+  <data name="SQLSERVER_PREFIX_INTERNAL_ERROR" xml:space="preserve">
+    <value>SQL Engine Message:</value>
+  </data>
   <data name="SQLSERVER_PREFIX_UNKNOWN_ERROR" xml:space="preserve">
     <value>SQL unknown origin:</value>
+  </data>
+  <data name="SQLSERVER_TRANSACTIONS_COMMIT_MISSED_TRANSACTION" xml:space="preserve">
+    <value>There isn't no transaction to be commited;</value>
+  </data>
+  <data name="SQLSERVER_TRANSACTIONS_CONNECTIONMODE_INCONSISTENCY" xml:space="preserve">
+    <value>You can not work on SQLConnectionModes.auto with sql transactions;</value>
+  </data>
+  <data name="SQLSERVER_TRANSACTIONS_CONNECTION_CLOSED" xml:space="preserve">
+    <value>You must have an open connection to initiate a transaction;</value>
+  </data>
+  <data name="SQLSERVER_TRANSACTIONS_ROLLBACK_MISSED_TRANSACTION" xml:space="preserve">
+    <value>There isn't no transaction to be rollback;</value>
+  </data>
+  <data name="SQLSERVER_TRANSACTIONS_TRANSACTION_IS_MANDATORY" xml:space="preserve">
+    <value>Use of transaction is mandatory;</value>
   </data>
 </root>

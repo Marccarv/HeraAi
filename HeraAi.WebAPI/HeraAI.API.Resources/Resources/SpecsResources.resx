@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DATAINTERCHANGE_JSON_DESERIALIZE_ERROR" xml:space="preserve">
+    <value>An Error occur while deserialize a JSON string to a object;</value>
+  </data>
+  <data name="ENUM_OPTION_NOT_EXPECTED" xml:space="preserve">
+    <value>Enumeration option not expected;</value>
+  </data>
   <data name="FORBIDDEN_EMPTY_CONNECTIONSTRING" xml:space="preserve">
     <value>Empty connection string not allowed;</value>
+  </data>
+  <data name="FORBIDDEN_NULL" xml:space="preserve">
+    <value>Null value not allowed;</value>
+  </data>
+  <data name="LOGIN_INVALID_CREDENTIALS" xml:space="preserve">
+    <value>Invalid Credentials;</value>
+  </data>
+  <data name="OUT_OF_ALLOWED_INTERVAL" xml:space="preserve">
+    <value>Value is out of allowed interval;</value>
+  </data>
+  <data name="REGEX_PATTERN_INCOMPATIBILITY" xml:space="preserve">
+    <value>Value does not respect the regex pattern;</value>
+  </data>
+  <data name="SPECS_PREFIX_INVALID_VALUE" xml:space="preserve">
+    <value>SPECS invalid value:</value>
+  </data>
+  <data name="TYPE_CONVERSION_IMCOMPATIBILITY" xml:space="preserve">
+    <value>Value can not be converted to the new type specified;</value>
+  </data>
+  <data name="UPDATING_PROPERTY_VALUE_INCONSISTENCY" xml:space="preserve">
+    <value>Value of property -updating- is inconsistent with current data operation;</value>
   </data>
 </root>

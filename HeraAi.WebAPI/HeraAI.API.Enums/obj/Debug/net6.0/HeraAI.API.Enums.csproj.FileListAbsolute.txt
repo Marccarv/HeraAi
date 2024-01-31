@@ -1,0 +1,12 @@
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\bin\Debug\net6.0\HeraAI.API.Enums.deps.json
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\bin\Debug\net6.0\HeraAI.API.Enums.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\bin\Debug\net6.0\HeraAI.API.Enums.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.csproj.AssemblyReference.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.GeneratedMSBuildEditorConfig.editorconfig
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.AssemblyInfoInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.AssemblyInfo.cs
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.csproj.CoreCompileInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\refint\HeraAI.API.Enums.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\HeraAI.API.Enums.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Enums\obj\Debug\net6.0\ref\HeraAI.API.Enums.dll

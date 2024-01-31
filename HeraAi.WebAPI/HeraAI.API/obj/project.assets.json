@@ -357,7 +357,10 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "HeraAI.API.Enums": "1.0.0",
-          "HeraAI.API.Exceptions": "1.0.0"
+          "HeraAI.API.Exceptions": "1.0.0",
+          "HeraAI.API.Models": "1.0.0",
+          "HeraAI.API.Resources": "1.0.0",
+          "HeraAI.API.Tools": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HeraAI.API.Models.Specs.dll": {}
@@ -382,6 +385,7 @@
         "dependencies": {
           "HeraAI.API.Exceptions": "1.0.0",
           "HeraAI.API.Resources": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Data.SqlClient": "4.8.6"
         },

@@ -141,6 +141,15 @@
               },
               "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Exceptions\\HeraAI.API.Exceptions.csproj": {
                 "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Exceptions\\HeraAI.API.Exceptions.csproj"
+              },
+              "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Models\\HeraAI.API.Models.csproj": {
+                "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Models\\HeraAI.API.Models.csproj"
+              },
+              "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Resources\\HeraAI.API.Resources.csproj": {
+                "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Resources\\HeraAI.API.Resources.csproj"
+              },
+              "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Tools\\HeraAI.API.Tools.csproj": {
+                "projectPath": "E:\\HeraAi\\HeraAi.WebAPI\\HeraAI.API.Tools\\HeraAI.API.Tools.csproj"
               }
             }
           }
@@ -338,6 +347,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"

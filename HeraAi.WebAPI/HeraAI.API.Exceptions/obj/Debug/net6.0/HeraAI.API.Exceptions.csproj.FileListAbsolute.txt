@@ -1,0 +1,12 @@
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\bin\Debug\net6.0\HeraAI.API.Exceptions.deps.json
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\bin\Debug\net6.0\HeraAI.API.Exceptions.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\bin\Debug\net6.0\HeraAI.API.Exceptions.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.csproj.AssemblyReference.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.AssemblyInfoInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.AssemblyInfo.cs
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.csproj.CoreCompileInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\refint\HeraAI.API.Exceptions.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\HeraAI.API.Exceptions.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Exceptions\obj\Debug\net6.0\ref\HeraAI.API.Exceptions.dll

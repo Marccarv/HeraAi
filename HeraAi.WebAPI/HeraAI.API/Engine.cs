@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Authentication;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using HeraAI.API.Enums;
-using HeraAI.API.Exceptions;
+﻿using HeraAI.API.Enums;
+using HeraAI.API.Tools;
 using HeraAI.API.Models;
+using HeraAI.API.Exceptions;
+using HeraAI.API.Tools.Dbms;
 using HeraAI.API.Models.Specs;
 using HeraAI.API.Resources.Resources;
-using HeraAI.API.Tools;
-using HeraAI.API.Tools.Dbms;
 
 
 namespace HeraAI.API
@@ -30,6 +23,8 @@ namespace HeraAI.API
         private SQLServer sqlServer;
         private User authenticatedUser;
 
+        private Users users;
+        private EnumOptions enumOptions;
 
         private Dictionary<Guid, string> _drinks = new Dictionary<Guid, string>()
         {
@@ -66,6 +61,7 @@ namespace HeraAI.API
             get { return !(this.AuthenticatedUser is null); }
         }
 
+
         #region Login
 
         /// <summary>
@@ -76,14 +72,17 @@ namespace HeraAI.API
         /// <returns>Authenticated user</returns>
         public bool Login(string email, string password)
         {
-            string message = "";
-            //encrypt password
 
-            // Validate if username or password are not empty
+            string message = "";
+
+
+            // VALIDATE IF USERNAME OR PASSWORD ARE NOT EMPTY
             if (!UserSpecs.Email.IsValid(email, ref message) || !UserSpecs.Password.IsValid(password, ref message))
                 throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), SpecsResources.LOGIN_INVALID_CREDENTIALS);
 
+
             password = Settings.Encrypt(password);
+
 
             if (this.Users.Exists(email, password, DataStates.Active) == false)
             {
@@ -91,155 +90,25 @@ namespace HeraAI.API
                 return false;
             }
 
-            // set authenticated user and clean savedVersion and LastUser because is not necessary
+
+            // SET AUTHENTICATED USER AND CLEAN SAVEDVERSION AND LASTUSER BECAUSE IS NOT NECESSARY
             this.authenticatedUser = this.Users.Get(email, password, DataStates.Active);
 
-            // Return authentication sucess
+
+            // RETURN AUTHENTICATION SUCESS
             return true;
-        }
 
-
-        /// <summary>
-        /// Mobile User login with list of permissions
-        /// </summary>
-        /// <param name="email">Email</param>
-        /// <param name="password">Password</param>
-        /// <returns>Authenticated user</returns>
-        public bool LoginMobile(string email, string password)
-        {
-            string message = "";
-            //encrypt password
-
-            // Validate if username or password are not empty
-            if (!UserSpecs.Email.IsValid(email, ref message) || !UserSpecs.Password.IsValid(password, ref message))
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), SpecsResources.LOGIN_INVALID_CREDENTIALS);
-
-            password = Settings.Encrypt(password);
-
-            if (this.Users.Exists(email, password, DataStates.Active) == false)
-            {
-                this.authenticatedUser = null;
-                return false;
-            }
-
-            // set authenticated user and clean savedVersion and LastUser because is not necessary
-            this.authenticatedUser = this.Users.GetMobile(email, password, DataStates.Active);
-
-            // Return authentication sucess
-            return true;
-        }
-
-        /// <summary>
-        /// User login with list of permissions
-        /// </summary>
-        /// <param name="email">Email</param>
-        /// <param name="password">Password</param>
-        /// <returns>Authenticated user</returns>
-        public bool LoginHeraAI(string email, string password)
-        {
-            string message = "";
-            //encrypt password
-
-            // Validate if username or password are not empty
-            if (!UserSpecs.Email.IsValid(email, ref message) || !UserSpecs.Password.IsValid(password, ref message))
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), SpecsResources.LOGIN_INVALID_CREDENTIALS);
-
-            password = Settings.Encrypt(password);
-
-            if (this.Users.Exists(email, password, DataStates.Active) == false)
-            {
-                this.authenticatedUser = null;
-                return false;
-            }
-
-            // set authenticated user and clean savedVersion and LastUser because is not necessary
-            this.authenticatedUser = this.Users.Get02(email, password, DataStates.Active);
-
-            // Return authentication sucess
-            return true;
-        }
-
-        public bool Login(string email, string password, Guid serialNumber)
-        {
-            string message = "";
-            //encrypt password
-
-            // Validate if username or password are not empty
-            if (!UserSpecs.Email.IsValid(email, ref message) || !UserSpecs.Password.IsValid(password, ref message))
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), SpecsResources.LOGIN_INVALID_CREDENTIALS);
-
-            password = Settings.Encrypt(password);
-
-            if (this.Users.Exists(email, password, DataStates.Active) == false)
-            {
-                this.authenticatedUser = null;
-                return false;
-            }
-
-            // set authenticated user and clean savedVersion and LastUser because is not necessary
-            this.authenticatedUser = this.Users.Get(email, password, serialNumber, DataStates.Active);
-
-            // Return authentication sucess
-            return true;
-        }
-
-        public bool LoginMobile(string email, string password, Guid? serialNumber, string deviceName)
-        {
-            string message = "";
-            //encrypt password
-
-            // Validate if username or password are not empty
-            if (!UserSpecs.Email.IsValid(email, ref message) || !UserSpecs.Password.IsValid(password, ref message))
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), SpecsResources.LOGIN_INVALID_CREDENTIALS);
-
-            password = Settings.Encrypt(password);
-
-            if (this.Users.Exists(email, password, DataStates.Active) == false)
-            {
-                this.authenticatedUser = null;
-                return false;
-            }
-
-            // set authenticated user and clean savedVersion and LastUser because is not necessary
-            this.authenticatedUser = this.Users.GetMobile(email, password, serialNumber != null ? serialNumber : null, deviceName, DataStates.Active);
-
-            // Return authentication sucess
-            return true;
-        }
-
-
-        public bool CheckPermission(string permissionName, Guid roleId)
-        {
-
-            if (this.Permissions.HasPermission(permissionName, roleId) == 0)
-            {
-                return false;
-            }
-
-            // Return authentication sucess
-            return true;
-        }
-
-        public bool CheckPermission(string permissionName, string userId, string customerId)
-        {
-
-            if (this.Permissions.HasPermission(permissionName, userId, customerId) == 0)
-            {
-                return false;
-            }
-
-            // Return authentication sucess
-            return true;
         }
 
         #endregion
+
 
         /// <summary>
         /// Logout authenticated user
         /// </summary>
         public void Logout()
         {
-            // set autenticatedUser with null
+            // SET AUTENTICATEDUSER WITH NULL
             this.authenticatedUser = null;
         }
 
@@ -249,31 +118,64 @@ namespace HeraAI.API
         /// </summary>
         public SQLServer SQLServer
         {
+
             get
             {
-                // if first time use then create object
+
+                // IF FIRST TIME USE THEN CREATE OBJECT
                 if (sqlServer is null)
                     sqlServer = new SQLServer(this.connectionString, SQLServer.SQLConnectionModes.manual);
 
-                // return object
+
+                // RETURN OBJECT
                 return sqlServer;
+
             }
+
         }
+
+
+        /// <summary>
+        /// Data object access
+        /// </summary>
+        public Users Users
+        {
+
+            get
+            {
+
+                // IF FIRST TIME USE THAN CREATE OBJECT
+                if (users is null)
+                    users = new Users(this);
+
+
+                // RETURN OBJECT
+                return users;
+
+            }
+
+        }
+
 
         /// <summary>
         /// Data object access
         /// </summary>
         public EnumOptions EnumOptions
         {
+
             get
             {
-                // If first time use than create object
+
+                // IF FIRST TIME USE THAN CREATE OBJECT
                 if (enumOptions is null)
                     enumOptions = new EnumOptions(this);
 
-                // Return object
+
+                // RETURN OBJECT
                 return enumOptions;
+
             }
+
         }
 
     }

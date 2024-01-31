@@ -1,0 +1,17 @@
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.csproj.AssemblyReference.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.GeneratedMSBuildEditorConfig.editorconfig
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.AssemblyInfoInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.AssemblyInfo.cs
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.csproj.CoreCompileInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Tools.deps.json
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Tools.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Tools.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Exceptions.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Resources.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Exceptions.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\bin\Debug\net6.0\HeraAI.API.Resources.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.csproj.CopyComplete
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\refint\HeraAI.API.Tools.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\HeraAI.API.Tools.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Tools\obj\Debug\net6.0\ref\HeraAI.API.Tools.dll

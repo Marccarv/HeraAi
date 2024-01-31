@@ -1,0 +1,16 @@
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\bin\Debug\net6.0\HeraAI.API.Resources.deps.json
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\bin\Debug\net6.0\HeraAI.API.Resources.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\bin\Debug\net6.0\HeraAI.API.Resources.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.csproj.AssemblyReference.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.Resources.OthersResources.resources
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.Resources.SpecsResources.resources
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.Resources.SQLResources.resources
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.csproj.GenerateResource.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.GeneratedMSBuildEditorConfig.editorconfig
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.AssemblyInfoInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.AssemblyInfo.cs
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.csproj.CoreCompileInputs.cache
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\refint\HeraAI.API.Resources.dll
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\HeraAI.API.Resources.pdb
+E:\HeraAi\HeraAi.WebAPI\HeraAI.API.Resources\obj\Debug\net6.0\ref\HeraAI.API.Resources.dll

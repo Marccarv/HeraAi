@@ -1,5 +1,6 @@
 ﻿using HeraAI.API.Enums;
 using System.Globalization;
+using HeraAI.API.Resources;
 using HeraAI.API.Exceptions;
 
 
@@ -456,12 +457,15 @@ namespace HeraAI.API.Models.Specs
         /// <returns>Min text length allowed</returns>
         public static int GetStringMinLength(StringLengthTypes stringLengthType)
         {
-            // Variables
+
+            // VARIABLES
             int minLength;
 
-            // Min length depends on the string content length
+
+            // MIN LENGTH DEPENDS ON THE STRING CONTENT LENGTH
             switch (stringLengthType)
             {
+
                 case StringLengthTypes.xSmall:
                 case StringLengthTypes.small:
                 case StringLengthTypes.medium:
@@ -475,10 +479,12 @@ namespace HeraAI.API.Models.Specs
 
                 default:
                     throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.SpecsResources.ENUM_OPTION_NOT_EXPECTED);
+            
             }
 
-            // Return length
+            // RETURN LENGTH
             return minLength;
+        
         }
 
 
@@ -489,12 +495,15 @@ namespace HeraAI.API.Models.Specs
         /// <returns>Max text length allowed</returns>
         public static int GetStringMaxLength(StringLengthTypes stringLengthType)
         {
-            // Variables
+
+            // VARIABLES
             int maxLength;
 
-            // Max length depends on the string content length
+
+            // MAX LENGTH DEPENDS ON THE STRING CONTENT LENGTH
             switch (stringLengthType)
             {
+
                 case StringLengthTypes.xSmall:
                     maxLength = 6;
 
@@ -536,12 +545,14 @@ namespace HeraAI.API.Models.Specs
 
                 default:
                     throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.SpecsResources.ENUM_OPTION_NOT_EXPECTED);
+            
             }
 
-            // Return length
-            return maxLength;
-        }
 
+            // RETURN LENGTH
+            return maxLength;
+
+        }
 
 
         /// <summary>

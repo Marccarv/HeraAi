@@ -395,10 +395,6 @@ namespace HeraAI.API
             // get objects from database
             users = this.Get("", "", SP_SELECT_USERS_AUTHENTICATION03, sqlParameters, 0, 0, 0);
 
-            // get the returned value
-            if ((Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value != Guid.Empty)
-                users[0].Driver_SerialNumber1 = (Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value;
-
             // if no records were returned from database throw an error
             if (users.Count == 0)
                 throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.OthersResources.OTHERS_NO_RECORDS_RETURNED_FROM_DATABASE);
@@ -447,10 +443,6 @@ namespace HeraAI.API
 
             // get objects from database
             users = this.GetMobile("", SP_SELECT_USERS_AUTHENTICATION03, sqlParameters, 1, 1, 1);
-
-            // get the returned value
-            if ((Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value != Guid.Empty)
-                users[0].Driver_SerialNumber1 = (Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value;
 
             // if no records were returned from database throw an error
             if (users.Count == 0)
@@ -502,15 +494,6 @@ namespace HeraAI.API
             // get objects from database
             users = this.Get("", "", SP_SELECT_USERS_AUTHENTICATION03, sqlParameters, 0, 0, 0);
 
-            // get the returned value
-            if ((string)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumberMessage")).Value == "SQLSERVER_VALIDATIONS_ADD_OR_UPDATE")
-            {
-                users[0].AuthMessage = Resources.Resources.SQLResources.SQLSERVER_VALIDATIONS_ADD_OR_UPDATE;
-            }
-            else if ((string)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumberMessage")).Value == "SQLSERVER_VALIDATIONS_LICENSE_CHANGED_RECENTLY")
-            {
-                users[0].AuthMessage = Resources.Resources.SQLResources.SQLSERVER_VALIDATIONS_LICENSE_CHANGED_RECENTLY;
-            }
 
             // if no records were returned from database throw an error
             if (users.Count == 0)
@@ -563,12 +546,6 @@ namespace HeraAI.API
             // get objects from database
             users = this.Get("", "", SP_SELECT_USERS_AUTHENTICATION04, sqlParameters, 0, 0, 0);
 
-            // get the returned value
-            if ((string)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumberMessage")).Value == "SQLSERVER_VALIDATIONS_ADD_OR_UPDATE")
-            {
-                users[0].Driver_IBAN = "SQLSERVER_VALIDATIONS_ADD_OR_UPDATE";
-            }
-
 
             // if no records were returned from database throw an error
             if (users.Count == 0)
@@ -581,70 +558,7 @@ namespace HeraAI.API
         }
 
 
-        public User GetMobile(string email, string password, Guid? serialNumber, string deviceName, DataStates dataState)
-        {
-            // variables
-            List<SqlParameter> sqlParameters;
-            List<User> users;
-            string info = "";
-
-            // invalidate dangerous words
-            email = Strings.InvalidateDangerousWords(email, GlobalVars.SymbolToInvalidateWords, GlobalVars.DangerousWords);
-
-            // data validation
-            if (!UserSpecs.Email.IsValid(email, ref info))
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(),
-                    string.Format("{0} [{1}] {2};",
-                    Resources.Resources.SpecsResources.SPECS_PREFIX_INVALID_VALUE,
-                    email,
-                    info));
-
-            // sql parameter list preparation
-            sqlParameters = new List<SqlParameter>
-            {
-                new SqlParameter("@email", email),
-                new SqlParameter("@password", password),
-                new SqlParameter("@driver_SerialNumber", serialNumber != null ? serialNumber : DBNull.Value),
-                new SqlParameter("@driver_DeviceName", deviceName != null ? deviceName : DBNull.Value),
-                new SqlParameter {
-                    ParameterName = "@newDriverSerialNumberMessage",
-                    Direction = System.Data.ParameterDirection.Output,
-                    SqlDbType = System.Data.SqlDbType.NVarChar,
-                    Size = 150
-                },
-                new SqlParameter {
-                    ParameterName = "@newDriverSerialNumber",
-                    Direction = System.Data.ParameterDirection.Output,
-                    SqlDbType = System.Data.SqlDbType.UniqueIdentifier
-                },
-                new SqlParameter("@inactive", dataState.Equals(DataStates.All) ? DBNull.Value : dataState.Equals(DataStates.Inactive) ? true : false ),
-                new SqlParameter("@_orderColumns", "{AU-ID}"),
-                new SqlParameter("@_pageNumber", 1),
-                new SqlParameter("@_pageSize", 1)
-            };
-
-
-            // get objects from database
-            users = this.GetMobile("", SP_SELECT_USERS_AUTHENTICATION06, sqlParameters, 1, 1, 1);
-
-            users[0].AuthMessage = engine.Users.GetErrorMessage((string)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumberMessage")).Value);
-
-            Guid newId = (Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value != Guid.Empty ? (Guid)sqlParameters.FirstOrDefault(p => p.ParameterName.Equals("@newDriverSerialNumber")).Value : Guid.Empty;
-
-            if (newId != Guid.Empty)
-            {
-                users[0].Driver_SerialNumber1 = newId;
-            }
-
-            // if no records were returned from database throw an error
-            if (users.Count == 0)
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.OthersResources.OTHERS_NO_RECORDS_RETURNED_FROM_DATABASE);
-            else if (users.Count > 1)
-                throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.OthersResources.OTHERS_INVALID_NUMBER_OF_RECORDS_BASED_ON_IDENTIFIER_FILTER);
-
-            // if code arrives here thats because object list has only one record
-            return users[0];
-        }
+        
 
 
         public List<User> GetSortedList(string userId, string customerId, string order, DataStates dataState, int pageNumber, int pageSize, int loadLevelCountry, int loadLevelCurrency, int loadLevelUnit)
@@ -887,31 +801,6 @@ namespace HeraAI.API
                 throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.OthersResources.OTHERS_EXCEPTION_PREFIX_ERROR + ' ' + ex.Message);
             }
 
-            // terminate each object processing
-            foreach (User user in users)
-            {
-
-                if (loadLevelCountry > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.CountryId))
-                        user.Country = engine.Countries.Get(userId, customerId, user.CountryId, DataStates.All);
-                }
-
-                if (loadLevelCurrency > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.CurrencyId))
-                        user.Currency = engine.Currencies.Get(userId, customerId, user.CurrencyId, DataStates.All);
-                }
-
-                if (loadLevelUnit > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.UnitId))
-                        user.Unit = engine.Units.Get(userId, customerId, user.UnitId, DataStates.All);
-                }
-
-            }
-
-
             // return object list
             return users;
         }
@@ -990,36 +879,7 @@ namespace HeraAI.API
                 throw new HeraAIExceptionError(currentNamespace, currentClassName, System.Reflection.MethodBase.GetCurrentMethod().ToString(), Resources.Resources.OthersResources.OTHERS_EXCEPTION_PREFIX_ERROR + ' ' + ex.Message);
             }
 
-            // terminate each object processing
-            foreach (User user in users)
-            {
 
-                if (loadLevelCountry > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.CountryId))
-                    {
-                        user.Country = engine.Countries.GetMobile(userId, user.CountryId, DataStates.All);
-                    }
-
-                }
-
-                if (loadLevelCurrency > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.CurrencyId))
-                    {
-                        user.Currency = engine.Currencies.GetMobile(userId, user.CurrencyId, DataStates.All);
-                    }
-                }
-
-                if (loadLevelUnit > 0)
-                {
-                    if (!String.IsNullOrEmpty(user.UnitId))
-                    {
-                        user.Unit = engine.Units.GetMobile(userId, user.UnitId, DataStates.All);
-                    }
-                }
-
-            }
 
 
             // return object list
